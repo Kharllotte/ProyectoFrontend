@@ -6,6 +6,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding-bottom: 20px;
+    flex-direction: wrap;
 }
 
 ul {
@@ -152,15 +153,47 @@ footer a {
 .subMenu{
     display: flex;    
     justify-content: space-evenly;
-
-    
+    margin-top: 10px;
 }
 
 .subTitle{
     font-size: 20px;
     text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #6191b47c;
+    margin-top: 40px;
 }
 
+/* ------- Pasteles --------*/
 
+.div_pasteles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+    background-color: #6191b4;
+}
+
+.media2{
+    width: 500px;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px
+}
+
+.media3{
+    width: 400px;
+    height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px
+}
+
+.media4{
+    width: 310px;
+    height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px
+}
