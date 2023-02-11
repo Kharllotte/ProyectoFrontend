@@ -240,6 +240,53 @@ footer a {
 }
 
 /* ----------------------------  Fin Page Pasteles Tematicos -------------------*/
+/* ----------------------------  Inicio Page Arma tu Pastel -------------------*/
+#text1 {
+  grid-area: text1;
+}
+
+#paso1 {
+  grid-area: paso1;
+}
+
+#paso2 {
+  grid-area: paso2;
+}
+
+#paso3 {
+  grid-area: paso3;
+}
+
+#paso4 {
+  grid-area: paso4;
+}
+
+#paso5 {
+  grid-area: paso5;
+}
+
+#text2 {
+  grid-area: text2;
+}
+
+#grilla {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "text1" "paso1" "paso2" "paso3" "paso4" "paso5" "text2";
+  row-gap: 10px;
+  justify-items: center;
+  align-items: center;
+}
+
+#paso1, #paso2, #paso3, #paso4, #paso5 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr;
+  column-gap: 10px;
+}
+
+/* ----------------------------  Fin Page Arma tu Pastel -------------------*/
 /* --------------------------- Inicio Page Pago -------------------------------*/
 .contectPago {
   display: flex;
