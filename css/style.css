@@ -16,6 +16,7 @@ ul {
   display: flex;
   margin-top: 40px;
   gap: 20px;
+  margin-bottom: 0;
 }
 
 li {
@@ -29,18 +30,34 @@ ul li a {
   color: black;
 }
 
-.menu__logo {
-  width: 100%;
-  height: 70px;
-  margin-left: 40px;
-}
-
 header div:nth-child(1) {
   padding: 20px 0px 0px 10px;
 }
 
 .redesSociales {
   padding: 40px 50px 0px 0px;
+  flex-direction: column;
+}
+
+nav {
+  text-align: center;
+}
+
+.menu__logo {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.menu {
+  color: black;
+  font-size: 20px;
+}
+
+.icon {
+  justify-content: center;
+  gap: 10px;
 }
 
 footer {
@@ -241,49 +258,77 @@ footer a {
 
 /* ----------------------------  Fin Page Pasteles Tematicos -------------------*/
 /* ----------------------------  Inicio Page Arma tu Pastel -------------------*/
-#text1 {
-  grid-area: text1;
+.PastelIni {
+  width: 100%;
+  height: auto;
 }
 
-#paso1 {
-  grid-area: paso1;
+.grid-item-div, .grid-container .grid-item2 .grid-item22, .grid-container .grid-item1 .grid-item11, .grid-container .grid-item, .grid-itemBI {
+  display: flex;
+  justify-content: center;
+  background-color: #03afff;
+  border-radius: 4px;
+  border: solid 2px #898787;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#paso2 {
-  grid-area: paso2;
+.grid-itemBI {
+  align-items: center;
+  background-image: url("../Media/Pasos.jpg");
 }
 
-#paso3 {
-  grid-area: paso3;
+@media (min-width: 600px) {
+  .wide {
+    grid-column: span 2;
+  }
+  .tall {
+    grid-row: span 2;
+  }
 }
-
-#paso4 {
-  grid-area: paso4;
-}
-
-#paso5 {
-  grid-area: paso5;
-}
-
-#text2 {
-  grid-area: text2;
-}
-
-#grilla {
+.grid-container {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: "text1" "paso1" "paso2" "paso3" "paso4" "paso5" "text2";
-  row-gap: 10px;
-  justify-items: center;
+  /*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+  /*grid-auto-rows: minmax(200px, auto);*/
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 85vh;
+  gap: 15px;
+  padding: 20px;
+  grid-auto-flow: dense;
+}
+.grid-container .grid-item {
   align-items: center;
 }
-
-#paso1, #paso2, #paso3, #paso4, #paso5 {
+.grid-container .grid-item1 {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: 1fr;
-  column-gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 10px;
+}
+.grid-container .grid-item1 .grid-item11 {
+  padding: 15px;
+  align-items: top;
+}
+.grid-container .grid-item2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 10px;
+}
+.grid-container .grid-item2 .grid-item22 {
+  width: 100%;
+  align-items: top;
+}
+.grid-container .grid-item4 {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  justify-content: center;
+  background-color: #333269;
+}
+.grid-container .grid-item4 .grid-item44 {
+  /*@extend .grid-item-div;*/
 }
 
 /* ----------------------------  Fin Page Arma tu Pastel -------------------*/
@@ -310,7 +355,7 @@ footer a {
 /* ----------------------------  Inicio Page Contacto ---------------------------*/
 .banner {
   width: 100%;
-  height: 600px;
+  height: auto;
 }
 
 .contentContact {

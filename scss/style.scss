@@ -1,7 +1,7 @@
-*{
+ *{
     margin: 0;
     padding: 0;
-}
+} 
 header{
     display: flex;
     justify-content: space-between;
@@ -15,6 +15,7 @@ ul {
     display: flex;
     margin-top: 40px;
     gap: 20px;
+    margin-bottom: 0;
 }
 
 li { 
@@ -30,11 +31,8 @@ ul {
         }
     }
 }
-.menu__logo {
-	width: 100%;
-	height: 70px;
-	margin-left: 40px;
-}
+
+
 header {
 	div {
 		&:nth-child(1) {
@@ -44,7 +42,28 @@ header {
 }
 .redesSociales {
 	padding: 40px 50px 0px 0px;
+	flex-direction: column;
 }
+
+nav{
+	text-align: center;
+}
+.menu__logo {
+	width: 100%;
+	height: 60px;
+	border-radius: 10px;
+	margin-left: 30px;
+}
+.menu{
+	color: black;
+	font-size: 20px;	
+}
+.icon{
+	justify-content: center;
+	gap: 10px;
+	
+}
+
 footer {
 	display: flex;
 	width: 100%;
@@ -234,57 +253,96 @@ footer {
 	margin-top: 10px;
 }
 
-
-
-
 /* ----------------------------  Fin Page Pasteles Tematicos -------------------*/
 
 /* ----------------------------  Inicio Page Arma tu Pastel -------------------*/
 
-#text1{
-	grid-area: text1;
-}
-#paso1{
-	grid-area: paso1;
-}
-#paso2{
-	grid-area: paso2;
-}
-#paso3{
-	grid-area: paso3;
-}
-#paso4{
-	grid-area: paso4;
-}
-#paso5{
-	grid-area: paso5;
-}
-#text2{
-	grid-area: text2;
+.PastelIni{
+	width: 100%;
+	height: auto;
 }
 
-#grilla{
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-	grid-template-areas: 
-	"text1"
-	"paso1"
-	"paso2"
-	"paso3"
-	"paso4"
-	"paso5"
-	"text2";
-	row-gap: 10px;
-	justify-items: center;
+.grid-item-div{
+	display: flex;
+	justify-content: center;
+	background-color: #03afff;
+	border-radius: 4px;
+	border: solid 2px #898787;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.grid-itemBI{
+	@extend .grid-item-div;
 	align-items: center;
+	background-image: url('../Media/Pasos.jpg');
 }
 
-#paso1, #paso2, #paso3, #paso4, #paso5{
+@media (min-width: 600px) {
+	.wide {
+		grid-column: span 2;
+	}
+
+	.tall {
+		grid-row: span 2;
+	}
+}
+.grid-container {
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: 1fr;
-	column-gap: 10px;
+	/*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+	/*grid-auto-rows: minmax(200px, auto);*/
+	grid-template-columns: repeat(2, 1fr);
+	grid-auto-rows: 85vh;
+	gap: 15px;
+	padding: 20px;
+	grid-auto-flow: dense;
+
+	.grid-item{
+		align-items: center;
+		@extend .grid-item-div;
+	}
+	
+	.grid-item1{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+		gap: 10px;
+
+		.grid-item11{
+			padding: 15px;
+			align-items: top;
+			@extend .grid-item-div;
+		}
+	}
+
+	.grid-item2{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-auto-rows: auto;
+		gap: 10px;
+
+		.grid-item22{
+			width: 100%;
+			align-items: top;
+			@extend .grid-item-div;
+		}
+	}
+
+	.grid-item4{
+		display: grid;
+		grid-template-columns: auto;
+		grid-auto-rows: auto;
+		justify-content: center;
+		background-color: #333269;
+
+		.grid-item44{
+			
+			
+			
+			/*@extend .grid-item-div;*/
+		}
+	}
 }
 
 
@@ -314,7 +372,7 @@ footer {
 
 .banner{
     width: 100%;
-    height: 600px;
+    height: auto;
 }
 .contentContact{
     display: flex;
