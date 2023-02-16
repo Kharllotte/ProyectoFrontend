@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap");
+/*
+font-family: 'Merienda', cursive;
+font-family: 'Lobster', cursive;
+*/
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +11,7 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   flex-direction: wrap;
 }
 
@@ -78,7 +83,7 @@ footer a {
 /* -----------------------------  Inicio INDEX ---------------------------------- */
 .img1 {
   width: 100%;
-  height: 550px;
+  height: auto;
 }
 
 .container {
@@ -101,6 +106,7 @@ footer a {
   transition: all 0.25s;
   background-color: #EEBBEC;
   background-color: #FFB7FF;
+  margin-bottom: 20px;
 }
 .container .card:hover {
   transform: translateY(-8px);
@@ -115,6 +121,7 @@ footer a {
   margin-bottom: 4px;
   font-weight: 600;
   color: black;
+  font-size: 15px;
 }
 
 .division {
@@ -122,9 +129,15 @@ footer a {
   justify-content: space-evenly;
   width: 100%;
 }
+.division .parrafo {
+  text-align: center;
+  margin: 40px 10px 20px 10px;
+  justify-content: center;
+  font-family: "Merienda", cursive;
+}
 .division .content1 {
   width: 48%;
-  height: 350px;
+  height: auto;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #FFB7FF;
@@ -134,7 +147,7 @@ footer a {
 }
 .division .content2 {
   width: 48%;
-  height: 350px;
+  height: auto;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #6191b4;
@@ -142,12 +155,30 @@ footer a {
   border: inset 5px #457190;
 }
 
-.parrafo {
-  text-align: center;
-  font-family: "Lobster", cursive;
-  margin: 40px 10px 20px 10px;
+@media (max-width: 768px) {
+  .division {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .division .content1 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #FFB7FF;
+    border: inset;
+    border: inset 5px #e998e9;
+  }
+  .division .content2 {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #6191b4;
+    border: inset 5px #457190;
+  }
 }
-
 /*----------------------------------- FIN INDEX -----------------------------------*/
 /* ----------------------------  Inicio Page Productos ---------------------------*/
 /* ------- Pasteles --------*/
