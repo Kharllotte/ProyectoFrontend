@@ -1,3 +1,4 @@
+/* Variables */
 @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap");
 /*
 font-family: 'Merienda', cursive;
@@ -294,20 +295,59 @@ footer a {
   height: auto;
 }
 
-.grid-item-div, .grid-container .grid-item2 .grid-item22, .grid-container .grid-item1 .grid-item11, .grid-container .grid-item, .grid-itemBI {
+.grid-item-div, .containerATP .grid-container .grid-item2 .grid-item22, .containerATP .grid-container .grid-item1 .grid-item11, .containerATP .grid-container .grid-itemBI, .containerATP .grid-container .grid-item {
   display: flex;
   justify-content: center;
-  background-color: #03afff;
+  /*background-color: #03afff;*/
   border-radius: 4px;
-  border: solid 2px #898787;
+  border: solid 2px #b06397;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.grid-itemBI {
+.containerATP {
+  width: 75%;
+  margin: 0px 12%;
+  background-color: #C3CDD5;
+}
+.containerATP .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 70vh;
+  gap: 15px;
+  padding: 20px;
+  grid-auto-flow: dense;
+}
+.containerATP .grid-container .grid-item {
   align-items: center;
-  background-image: url("../Media/Pasos.jpg");
+}
+.containerATP .grid-container .grid-itemBI {
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+}
+.containerATP .grid-container .grid-item1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 5px;
+}
+.containerATP .grid-container .grid-item1 .grid-item11 {
+  padding: 15px;
+  align-items: top;
+  border-radius: 50px;
+}
+.containerATP .grid-container .grid-item2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 10px;
+}
+.containerATP .grid-container .grid-item2 .grid-item22 {
+  width: 100%;
+  align-items: top;
+  border-radius: 50px;
 }
 
 @media (min-width: 600px) {
@@ -318,50 +358,58 @@ footer a {
     grid-row: span 2;
   }
 }
-.grid-container {
-  display: grid;
-  /*grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
-  /*grid-auto-rows: minmax(200px, auto);*/
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 85vh;
-  gap: 15px;
-  padding: 20px;
-  grid-auto-flow: dense;
+@media (max-width: 1500px) {
+  .containerATP {
+    width: 100%;
+    margin: 0px;
+  }
 }
-.grid-container .grid-item {
-  align-items: center;
+@media (max-width: 800px) {
+  .grid-item-div, .containerATP .grid-container .grid-item, .containerATP .grid-container .grid-itemBI, .containerATP .grid-container .grid-item1 .grid-item11, .containerATP .grid-container .grid-item2 .grid-item22 {
+    display: flex;
+    justify-content: center;
+    border-radius: 4px;
+    border: solid 2px #b06397;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .containerATP .grid-container {
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-auto-flow: dense;
+  }
+  .containerATP .grid-container .grid-itemBI {
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+  }
+  .containerATP .grid-container .grid-item1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+    gap: 5px;
+  }
+  .containerATP .grid-container .grid-item1 .grid-item11 {
+    padding: 15px;
+    align-items: top;
+    border-radius: 50px;
+  }
+  .containerATP .grid-container .grid-item2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 300px;
+    gap: 10px;
+  }
+  .containerATP .grid-container .grid-item2 .grid-item22 {
+    width: 100%;
+    align-items: top;
+    border-radius: 50px;
+  }
 }
-.grid-container .grid-item1 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
-  gap: 10px;
-}
-.grid-container .grid-item1 .grid-item11 {
-  padding: 15px;
-  align-items: top;
-}
-.grid-container .grid-item2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: auto;
-  gap: 10px;
-}
-.grid-container .grid-item2 .grid-item22 {
-  width: 100%;
-  align-items: top;
-}
-.grid-container .grid-item4 {
-  display: grid;
-  grid-template-columns: auto;
-  grid-auto-rows: auto;
-  justify-content: center;
-  background-color: #333269;
-}
-.grid-container .grid-item4 .grid-item44 {
-  /*@extend .grid-item-div;*/
-}
-
 /* ----------------------------  Fin Page Arma tu Pastel -------------------*/
 /* --------------------------- Inicio Page Pago -------------------------------*/
 .contectPago {
