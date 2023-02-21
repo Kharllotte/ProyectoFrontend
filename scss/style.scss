@@ -60,6 +60,7 @@ nav{
 .menu{
 	color: black;
 	font-size: 20px;	
+	
 }
 .icon{
 	justify-content: center;
@@ -121,6 +122,7 @@ footer {
 			font-weight: 600;
 			color: black;
 			font-size: 15px;
+			font-family: $tipografiaSecond;
 		}
 	}
 }
@@ -133,7 +135,7 @@ footer {
 		text-align: center;
 		margin: 40px 10px 20px 10px;
 		justify-content: center;
-		font-family: 'Merienda', cursive;
+		font-family: $tipografiaPrincipal;
 	}
 	.content1 {
 		width: 48%;
@@ -378,7 +380,7 @@ footer {
 	}
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
 	.containerATP{
 		width: 100%;
 		margin: 0px;
@@ -451,10 +453,10 @@ footer {
 /* ----------------------------  Fin Page Arma tu Pastel -------------------*/
 
 /* --------------------------- Inicio Page Pago -------------------------------*/
-.contectPago{
+/*.contectPago{
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: center;
     background: rgb(240,165,244);
     background: linear-gradient(90deg, rgba(240,165,244,1) 0%, rgba(124,121,124,1) 100%);
     .pagos, .recordatorio{
@@ -462,11 +464,42 @@ footer {
         border-radius: 20px;
         margin: 30px 0px;
     }
+}*/
+.contectPago{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #333269;
 }
 .InformacionPago{
     width: 100%;
-    height: 650px;
 }
+
+.textPago1{
+	position: absolute; 
+	margin: 10% 0 0 4%; 
+	text-align: center; 
+	font-size: 6vw;
+	font-size: 2,6rem;
+	font-family: $tipografiaPrincipal;
+
+}
+/*.pagos1{
+	width: 100%;
+	height: 400px;
+	/*background-size: 100% 100%;/
+	background-position: center;
+	background-repeat: no-repeat;
+}*/
+/*.contenidoIMG{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #6191b4;
+	.pagos{
+		display: flex;
+		
+	}
+}*/
 
 /* --------------------------- Fin Page Pago -------------------------------*/
 
