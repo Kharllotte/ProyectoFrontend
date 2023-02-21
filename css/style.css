@@ -1,8 +1,12 @@
 /* Variables */
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap");
+/*@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap');
+<style>*/
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=Shantell+Sans:ital@1&display=swap");
 /*
 font-family: 'Merienda', cursive;
 font-family: 'Lobster', cursive;
+
+font-family: 'Shantell Sans', cursive;
 */
 * {
   margin: 0;
@@ -123,6 +127,7 @@ footer a {
   font-weight: 600;
   color: black;
   font-size: 15px;
+  font-family: "Shantell Sans", cursive;
 }
 
 .division {
@@ -358,7 +363,7 @@ footer a {
     grid-row: span 2;
   }
 }
-@media (max-width: 1500px) {
+@media (max-width: 1000px) {
   .containerATP {
     width: 100%;
     margin: 0px;
@@ -412,24 +417,54 @@ footer a {
 }
 /* ----------------------------  Fin Page Arma tu Pastel -------------------*/
 /* --------------------------- Inicio Page Pago -------------------------------*/
+/*.contectPago{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: rgb(240,165,244);
+    background: linear-gradient(90deg, rgba(240,165,244,1) 0%, rgba(124,121,124,1) 100%);
+    .pagos, .recordatorio{
+        height: 450px;
+        border-radius: 20px;
+        margin: 30px 0px;
+    }
+}*/
 .contectPago {
   display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  background: rgb(240, 165, 244);
-  background: linear-gradient(90deg, rgb(240, 165, 244) 0%, rgb(124, 121, 124) 100%);
-}
-.contectPago .pagos, .contectPago .recordatorio {
-  height: 450px;
-  border-radius: 20px;
-  margin: 30px 0px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #333269;
 }
 
 .InformacionPago {
   width: 100%;
-  height: 650px;
 }
 
+.textPago1 {
+  position: absolute;
+  margin: 10% 0 0 4%;
+  text-align: center;
+  font-size: 6vw;
+  font-size: 2, 6rem;
+  font-family: "Merienda", cursive;
+}
+
+/*.pagos1{
+	width: 100%;
+	height: 400px;
+	/*background-size: 100% 100%;/
+	background-position: center;
+	background-repeat: no-repeat;
+}*/
+/*.contenidoIMG{
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #6191b4;
+	.pagos{
+		display: flex;
+
+	}
+}*/
 /* --------------------------- Fin Page Pago -------------------------------*/
 /* ----------------------------  Inicio Page Contacto ---------------------------*/
 .banner {
