@@ -1,6 +1,14 @@
 
 @import "variables";
 
+/*
+$tipografiaPrincipal:'Merienda', cursive;
+$tipografiaSecond:'Shantell Sans', cursive;
+$tipografiaThird:'Lobster Two', cursive;
+$tipografiaFourth:'Playfair Display', serif;
+$tipografiaFifth:'Bree Serif', serif;
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -31,6 +39,7 @@ ul {
 		a {
 			text-decoration: none;
 			color: black;
+			font-family: $tipografiaFourth;
         }
     }
 }
@@ -60,6 +69,8 @@ nav{
 .menu{
 	color: black;
 	font-size: 20px;	
+	font-weight: bold;
+	font-family: $tipografiaPrincipal;
 	
 }
 .icon{
@@ -122,7 +133,7 @@ footer {
 			font-weight: 600;
 			color: black;
 			font-size: 15px;
-			font-family: $tipografiaSecond;
+			font-family: $tipografiaPrincipal;
 		}
 	}
 }
@@ -195,11 +206,14 @@ footer {
 	background-color: #FFB7FF;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	font-weight: bold;
+	font-family: $tipografiaFourth;
 }
 .subMenu {
 	display: flex;
 	justify-content: space-evenly;
 	margin-top: 10px;
+	
 }
 .subTitle {
 	font-size: 20px;
@@ -208,6 +222,8 @@ footer {
 	padding-bottom: 30px;
 	background-color: #6191b47c;
 	margin-top: 40px;
+	font-weight: bold;
+	font-family: $tipografiaFourth;
 }
 .div_pasteles {
 	display: flex;
@@ -509,30 +525,47 @@ footer {
     width: 100%;
     height: auto;
 }
+
+.map-responsive {
+	background: #D4AEEA;
+    overflow:hidden;
+    padding-bottom:600px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+    position:relative;
+    height:0;
+	
+	iframe{
+		left:0;
+		top:0;
+		padding: 5vw;
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+}
+
 .contentContact{
-    display: flex;
-    height: 80vh;
+	display: flex;
     background: #D4AEEA;
     align-items: center;
-    padding-left: 100px;
+    /*padding-left: 100px;*/
     .formulario{
         display: flex;
-        width: 100%;
+        width: 100vw;
         justify-content: center;
         align-items: center;
         form{
             display: flex;
             flex-flow: column;
             background-color: white;
-            width: 40%;
-            height: 400px;
-            /*padding: 10px;*/
+            width: 60%;
+            height: 60vh;
+            padding: 10px;
             justify-content: center;
             align-items: center;
             box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 50px;
             border-radius: 10px;
-            padding-top: 20px;
-            
+            margin: 50px;
+			font-family: $tipografiaPrincipal;
             input, textarea {
                 border: none;
                 resize: none;
@@ -542,7 +575,6 @@ footer {
                 margin: 20px;
                 transition: all 300ms;
                 border-bottom: 1px solid #B7B2C0;
-
                 &:focus{
                     border-bottom-color: blueviolet;
                 }        
@@ -552,7 +584,7 @@ footer {
                 border: none;
                 outline: none;
                 padding: 15px;
-                width: 200px;
+                width: 35%;
                 color: white;
                 border-radius:8px;
                 background-color: #333269;
@@ -569,5 +601,32 @@ footer {
         }
     }
 }
+
+
+@media (max-width:800px){
+	.map-responsive {
+		padding-bottom:400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+	}
+	.contentContact{
+		
+		.formulario{
+			width: 100%;
+			form{
+				display: flex;
+				flex-flow: column;
+				background-color: white;
+				width: 100%;
+				height: 60vh;
+				padding: 5px;
+				justify-content: center;
+				align-items: center;
+				box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 50px;
+				border-radius: 10px;
+				margin: 20px;
+			}
+		}
+	}
+}
+
 
 /* ----------------------------  Fin Page Contacto ---------------------------*/
