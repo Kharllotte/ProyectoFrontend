@@ -1,12 +1,22 @@
 /* Variables */
 /*@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&display=swap');
-<style>*/
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=Shantell+Sans:ital@1&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300&family=Shantell+Sans:ital@1&display=swap');
+*/
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Lobster+Two:ital@0;1&family=Merienda:wght@300&family=Playfair+Display:ital@1&family=Shantell+Sans:ital@1&display=swap");
 /*
-font-family: 'Merienda', cursive;
-font-family: 'Lobster', cursive;
 
+font-family: 'Bree Serif', serif;
+font-family: 'Lobster Two', cursive;
+font-family: 'Merienda', cursive;
+font-family: 'Playfair Display', serif;
 font-family: 'Shantell Sans', cursive;
+*/
+/*
+$tipografiaPrincipal:'Merienda', cursive;
+$tipografiaSecond:'Shantell Sans', cursive;
+$tipografiaThird:'Lobster Two', cursive;
+$tipografiaFourth:'Playfair Display', serif;
+$tipografiaFifth:'Bree Serif', serif;
 */
 * {
   margin: 0;
@@ -38,6 +48,7 @@ li {
 ul li a {
   text-decoration: none;
   color: black;
+  font-family: "Playfair Display", serif;
 }
 
 header div:nth-child(1) {
@@ -63,6 +74,8 @@ nav {
 .menu {
   color: black;
   font-size: 20px;
+  font-weight: bold;
+  font-family: "Merienda", cursive;
 }
 
 .icon {
@@ -127,7 +140,7 @@ footer a {
   font-weight: 600;
   color: black;
   font-size: 15px;
-  font-family: "Shantell Sans", cursive;
+  font-family: "Merienda", cursive;
 }
 
 .division {
@@ -194,6 +207,8 @@ footer a {
   background-color: #FFB7FF;
   padding-top: 20px;
   padding-bottom: 20px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
 }
 
 .subMenu {
@@ -209,6 +224,8 @@ footer a {
   padding-bottom: 30px;
   background-color: rgba(97, 145, 180, 0.4862745098);
   margin-top: 40px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
 }
 
 .div_pasteles {
@@ -472,16 +489,31 @@ footer a {
   height: auto;
 }
 
+.map-responsive {
+  background: #D4AEEA;
+  overflow: hidden;
+  padding-bottom: 600px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  padding: 5vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 .contentContact {
   display: flex;
-  height: 80vh;
   background: #D4AEEA;
   align-items: center;
-  padding-left: 100px;
+  /*padding-left: 100px;*/
 }
 .contentContact .formulario {
   display: flex;
-  width: 100%;
+  width: 100vw;
   justify-content: center;
   align-items: center;
 }
@@ -489,14 +521,15 @@ footer a {
   display: flex;
   flex-flow: column;
   background-color: white;
-  width: 40%;
-  height: 400px;
-  /*padding: 10px;*/
+  width: 60%;
+  height: 60vh;
+  padding: 10px;
   justify-content: center;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 50px;
   border-radius: 10px;
-  padding-top: 20px;
+  margin: 50px;
+  font-family: "Merienda", cursive;
 }
 .contentContact .formulario form input, .contentContact .formulario form textarea {
   border: none;
@@ -515,7 +548,7 @@ footer a {
   border: none;
   outline: none;
   padding: 15px;
-  width: 200px;
+  width: 35%;
   color: white;
   border-radius: 8px;
   background-color: #333269;
@@ -529,6 +562,27 @@ footer a {
   box-shadow: rgba(0, 0, 0, 0.9) 0px 0px 10px;
 }
 
+@media (max-width: 800px) {
+  .map-responsive {
+    padding-bottom: 400px; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+  }
+  .contentContact .formulario {
+    width: 100%;
+  }
+  .contentContact .formulario form {
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    width: 100%;
+    height: 60vh;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 50px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+}
 /* ----------------------------  Fin Page Contacto ---------------------------*/
 
 /*# sourceMappingURL=style.css.map */

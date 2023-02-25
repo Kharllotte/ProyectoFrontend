@@ -474,14 +474,14 @@ footer a {
 
 .contentContact {
   display: flex;
-  height: 80vh;
+  height: auto;
   background: #D4AEEA;
   align-items: center;
-  padding-left: 100px;
+  /*padding-left: 100px;*/
 }
 .contentContact .formulario {
   display: flex;
-  width: 100%;
+  /*width: 100%;*/
   justify-content: center;
   align-items: center;
 }
